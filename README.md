@@ -15,6 +15,7 @@ O objetivo deste projeto é identificar os conhecimentos quanto às tecnologias 
 - H2 Database
 - Lombok
 - Swagger
+- Mapstruct
 
 ### O que esta API permite :
 
