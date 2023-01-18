@@ -36,7 +36,7 @@ public class Address {
 	private Long id;
 	
 	@Column(nullable = false)
-	private boolean isPrincipal;
+	private boolean main;
 		
 	@Column(nullable = false)
 	private String address;	

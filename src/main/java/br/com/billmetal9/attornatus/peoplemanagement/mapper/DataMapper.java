@@ -21,8 +21,7 @@ import br.com.billmetal9.attornatus.peoplemanagement.model.Person;
 // Annotation que indica qual o tipo de mapeamento será feito pelo Mapstruct
 @Mapper(componentModel = "spring")
 public interface DataMapper {
-
-	// Cria uma instância de DataMapper
+	
 	DataMapper INSTANCE = Mappers.getMapper(DataMapper.class);
 	
 	// Annotation que mapeia e determina o formato de data
@@ -30,6 +29,8 @@ public interface DataMapper {
 	// método que recebe um PersonDTO e retorna um Person
 	Person toPersonModel(PersonDTO personDto);
 	
+	// Annotation que mapeia e determina o formato de data
+	@Mapping(target = "birthDate", source = "birthDate", dateFormat = "dd-MM-yyyy")
 	// método que recebe um Person e retorna um PersonDTO
 	PersonDTO toPersonDTO(Person person);
 	

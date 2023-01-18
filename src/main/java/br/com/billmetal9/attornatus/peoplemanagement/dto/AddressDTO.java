@@ -32,7 +32,7 @@ public class AddressDTO {
 	private Long id;
 	
 	@NotEmpty
-	private boolean isPrincipal;
+	private boolean main;
 		
 	@NotEmpty
 	private String address;	
