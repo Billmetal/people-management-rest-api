@@ -19,6 +19,6 @@ public class NoAddressRegisteredException extends RuntimeException {
 	private static final long serialVersionUID = 2881141596907705468L;
 	
 	public NoAddressRegisteredException(Long personId) {
-		super("Nenhum endereço registrado para a pessoa de id : " + personId);
+		super("Nenhum endereço registrado para a pessoa de id : " + personId,null,false,false);
 	}
 }

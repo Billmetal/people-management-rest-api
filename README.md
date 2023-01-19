@@ -14,7 +14,7 @@ O objetivo deste projeto é identificar os conhecimentos quanto às tecnologias 
 - Validation
 - H2 Database
 - Lombok
-- Swagger
+- Swagger (Openapi)
 - Mapstruct
 
 ### O que esta API permite :

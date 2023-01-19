@@ -20,6 +20,6 @@ public class PersonNotFoundException extends RuntimeException {
 	private static final long serialVersionUID = 4504049816722856101L;
 
 	public PersonNotFoundException(Long id) {
-		super("Nenhuma Pessoa encontrada com o id : " + id);
+		super("Nenhuma Pessoa encontrada com o id : " + id,null,false,false);
 	}
 }
