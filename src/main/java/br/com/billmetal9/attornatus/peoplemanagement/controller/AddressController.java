@@ -27,7 +27,6 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
  * 
  * **/
 
-
 // Annotation que indica que esta é uma classe Controle REST
 @RestController
 // Configura o endpoint principal deste controle
