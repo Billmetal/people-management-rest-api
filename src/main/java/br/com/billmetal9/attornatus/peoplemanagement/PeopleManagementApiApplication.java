@@ -20,6 +20,4 @@ public class PeopleManagementApiApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(PeopleManagementApiApplication.class, args);
 	}
-
-
 }

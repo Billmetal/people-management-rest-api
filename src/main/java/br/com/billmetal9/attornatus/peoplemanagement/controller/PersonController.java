@@ -18,7 +18,6 @@ import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.info.Contact;
 import io.swagger.v3.oas.annotations.info.Info;
 import io.swagger.v3.oas.annotations.servers.Server;
-import io.swagger.v3.oas.annotations.servers.ServerVariable;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
@@ -41,12 +40,12 @@ import jakarta.validation.Valid;
                 contact = @Contact(name = "Willian T. K.", url = "https://github.com/Billmetal", email = "billmetal9@gmail.com")
                 ),
         servers = @Server(
-                url = "http://localhost:8080",
-                description = "Localização do servidor",
-                variables = {
-                        @ServerVariable(name = "serverUrl", defaultValue = "localhost"),
-                        @ServerVariable(name = "serverHttpPort", defaultValue = "8080")
-                	}
+                url = "https://people-management-rest-api-production.up.railway.app",
+                description = "Localização do servidor"
+//                variables = {
+//                        @ServerVariable(name = "serverUrl", defaultValue = "localhost"),
+//                        @ServerVariable(name = "serverHttpPort", defaultValue = "8080")
+//                	}
                 )
 			)
 // Annotation que indica que esta é uma classe Controle REST
