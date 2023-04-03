@@ -32,6 +32,7 @@ import jakarta.validation.Valid;
  * 
  * **/
 
+
 @OpenAPIDefinition(
         info = @Info(
                 title = "Gerenciamento de Pessoas",
@@ -40,7 +41,7 @@ import jakarta.validation.Valid;
                 contact = @Contact(name = "Willian T. K.", url = "https://github.com/Billmetal", email = "billmetal9@gmail.com")
                 ),
         servers = @Server(
-                url = "https://people-management-rest-api-production.up.railway.app",
+                url = "URL DO SEU SERVER",
                 description = "Localização do servidor"
 //                variables = {
 //                        @ServerVariable(name = "serverUrl", defaultValue = "localhost"),
