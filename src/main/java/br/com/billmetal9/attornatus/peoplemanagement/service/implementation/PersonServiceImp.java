@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
+import br.com.billmetal9.attornatus.peoplemanagement.dto.CreatePersonDTO;
 import br.com.billmetal9.attornatus.peoplemanagement.dto.PersonDTO;
 import br.com.billmetal9.attornatus.peoplemanagement.exception.PersonNotFoundException;
 import br.com.billmetal9.attornatus.peoplemanagement.mapper.DataMapper;
@@ -40,8 +41,8 @@ public class PersonServiceImp implements PersonService {
 	// método que cria uma pessoa
 	@Override
 	@Transactional
-	public PersonDTO createPerson(PersonDTO personDto) {
-		Person person = dataMapper.toPersonModel(personDto);
+	public PersonDTO createPerson(CreatePersonDTO createPersonDto) {
+		Person person = dataMapper.toPersonModel(createPersonDto);
 		Person personSaved = personRepository.save(person);
 		return dataMapper.toPersonDTO(personSaved);
 	}

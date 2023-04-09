@@ -2,6 +2,7 @@ package br.com.billmetal9.attornatus.peoplemanagement.service;
 
 import java.util.List;
 
+import br.com.billmetal9.attornatus.peoplemanagement.dto.CreatePersonDTO;
 import br.com.billmetal9.attornatus.peoplemanagement.dto.PersonDTO;
 
 /**
@@ -16,7 +17,7 @@ import br.com.billmetal9.attornatus.peoplemanagement.dto.PersonDTO;
 public interface PersonService {
 
 	// método que cria uma pessoa
-	PersonDTO createPerson(PersonDTO personDto);
+	PersonDTO createPerson(CreatePersonDTO createPersonDto);
 	
 	// método que edita e atualiza uma pessoa
 	PersonDTO editPerson(Long id,PersonDTO personDto);

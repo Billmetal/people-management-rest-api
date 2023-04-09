@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import br.com.billmetal9.attornatus.peoplemanagement.dto.CreatePersonDTO;
 import br.com.billmetal9.attornatus.peoplemanagement.dto.PersonDTO;
 import br.com.billmetal9.attornatus.peoplemanagement.service.PersonService;
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
@@ -41,7 +42,7 @@ import jakarta.validation.Valid;
                 contact = @Contact(name = "Willian T. K.", url = "https://github.com/Billmetal", email = "billmetal9@gmail.com")
                 ),
         servers = @Server(
-                url = "URL DO SEU SERVER",
+                url = "https://people-management-rest-api-production.up.railway.app",
                 description = "Localização do servidor"
 //                variables = {
 //                        @ServerVariable(name = "serverUrl", defaultValue = "localhost"),
@@ -82,8 +83,8 @@ public class PersonController {
 	@PostMapping()
 	// método que recebe o RequestBody de PersonDTO contendo name e birthDate da pessoa que será criada e
 	//retorna a pessoa criada
-	public ResponseEntity<PersonDTO> createPerson(@RequestBody @Valid PersonDTO personDto){
-		PersonDTO result = personService.createPerson(personDto);
+	public ResponseEntity<PersonDTO> createPerson(@RequestBody @Valid CreatePersonDTO createPersonDto){
+		PersonDTO result = personService.createPerson(createPersonDto);
 		return ResponseEntity.status(HttpStatus.CREATED).body(result);
 	}
 	

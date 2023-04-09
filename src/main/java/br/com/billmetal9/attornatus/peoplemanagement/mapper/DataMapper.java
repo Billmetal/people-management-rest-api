@@ -5,6 +5,7 @@ import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;
 
 import br.com.billmetal9.attornatus.peoplemanagement.dto.AddressDTO;
+import br.com.billmetal9.attornatus.peoplemanagement.dto.CreatePersonDTO;
 import br.com.billmetal9.attornatus.peoplemanagement.dto.PersonDTO;
 import br.com.billmetal9.attornatus.peoplemanagement.model.Address;
 import br.com.billmetal9.attornatus.peoplemanagement.model.Person;
@@ -23,6 +24,11 @@ import br.com.billmetal9.attornatus.peoplemanagement.model.Person;
 public interface DataMapper {
 	
 	DataMapper INSTANCE = Mappers.getMapper(DataMapper.class);
+	
+	// Annotation que mapeia e determina o formato de data
+	@Mapping(target = "birthDate", source = "birthDate", dateFormat = "dd/MM/yyyy")
+	// método que recebe um PersonDTO e retorna um Person
+	Person toPersonModel(CreatePersonDTO createPersonDto);
 	
 	// Annotation que mapeia e determina o formato de data
 	@Mapping(target = "birthDate", source = "birthDate", dateFormat = "dd/MM/yyyy")
